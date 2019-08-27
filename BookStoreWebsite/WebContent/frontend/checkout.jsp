@@ -54,12 +54,12 @@
 							<td><span id="book-title">${item.key.title}</span></td>
 							<td>${item.key.author}</td>
 							<td><fmt:formatNumber value="${item.key.price}"
-									type="currency" /></td>
+									type="currency" currencySymbol="$"/></td>
 							<td align="center"><input type="text"
 								name="quantity${status.index + 1}" value="${item.value}"
 								size="5" readonly="readonly" /></td>
 							<td><fmt:formatNumber value="${item.value*item.key.price}"
-									type="currency" /></td>
+									type="currency" currencySymbol="$"/></td>
 						</tr>
 					</c:forEach>
 
@@ -70,7 +70,7 @@
 						<td><b>${cart.totalQuantity} book(s)</b></td>
 						<td>Total:</td>
 						<td colspan="2"><b><fmt:formatNumber
-									value="${cart.totalAmount}" type="currency" /></b></td>
+									value="${cart.totalAmount}" type="currency" currencySymbol="$"/></b></td>
 					</tr>
 				</table>
 				<h2>Your Shipping Information</h2>

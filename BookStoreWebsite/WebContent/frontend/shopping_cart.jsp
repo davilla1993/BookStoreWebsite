@@ -53,8 +53,8 @@
 									<input type="hidden" name="bookId" value="${item.key.bookId}"/>
 									<input type="text" name="quantity${status.index + 1}" value="${item.value}" size="5"/>
 								</td>
-								<td><fmt:formatNumber value="${item.key.price}" type="currency" /></td>
-								<td><fmt:formatNumber value="${item.value*item.key.price}" type="currency" /></td>
+								<td><fmt:formatNumber value="${item.key.price}" type="currency" currencySymbol="$"/></td>
+								<td><fmt:formatNumber value="${item.value*item.key.price}" type="currency" currencySymbol="$"/></td>
 								<td><a href="remove_from_cart?book_id=${item.key.bookId}">Remove</a></td>
 							</tr>
 						</c:forEach>
@@ -66,7 +66,7 @@
 							<td><b>${cart.totalQuantity} book(s)</b></td>
 							<td>Total:</td>
 							<td colspan="2"><b><fmt:formatNumber
-										value="${cart.totalAmount}" type="currency" /></b></td>
+										value="${cart.totalAmount}" type="currency" currencySymbol="$"/></b></td>
 						</tr>
 					</table>
 				</div>

@@ -35,7 +35,7 @@
 					</tr>
 					<tr>
 						<td><b>Total Amount:</b></td>
-						<td><fmt:formatNumber value="${order.total}" type="currency"/></td>
+						<td><fmt:formatNumber value="${order.total}" type="currency" currencySymbol="$"/></td>
 					</tr>
 					<tr>
 						<td><b>Recipient Name:</b></td>
@@ -76,9 +76,9 @@
 							${orderDetail.book.title}
 						</td>
 						<td>${orderDetail.book.author}</td>
-						<td><fmt:formatNumber value="${orderDetail.book.price}" type="currency"/></td>
+						<td><fmt:formatNumber value="${orderDetail.book.price}" type="currency" currencySymbol="$"/></td>
 						<td>${orderDetail.quantity}</td>
-						<td><fmt:formatNumber value="${orderDetail.subtotal}" type="currency"/></td>
+						<td><fmt:formatNumber value="${orderDetail.subtotal}" type="currency" currencySymbol="$"/></td>
 					</tr>
 					</c:forEach>
 					<tr>
@@ -89,7 +89,7 @@
 							<b>${order.bookCopies}</b>
 						</td>
 						<td>
-							<b><fmt:formatNumber value="${order.total}" type="currency"/></b>
+							<b><fmt:formatNumber value="${order.total}" type="currency" currencySymbol="$"/></b>
 						</td>
 					</tr>
 				</table>

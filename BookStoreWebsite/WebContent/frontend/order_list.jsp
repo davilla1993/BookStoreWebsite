@@ -38,7 +38,7 @@
 							<td>${status.index +1}</td>
 							<td>${order.orderId}</td>
 							<td>${order.bookCopies}</td>
-							<td><fmt:formatNumber value="${order.total}" type="currency"/></td>
+							<td><fmt:formatNumber value="${order.total}" type="currency" currencySymbol="$" /></td>
 							<td>${order.orderDate}</td>
 							<td>${order.status}</td>
 							

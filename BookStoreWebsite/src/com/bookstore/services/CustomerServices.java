@@ -54,7 +54,7 @@ public class CustomerServices {
 		String city = request.getParameter("city");
 		String zipcode = request.getParameter("zipCode");
 		String country = request.getParameter("country");
-
+		
 		if(email != null && !email.equals("")) {
 		customer.setEmail(email);
 		}
