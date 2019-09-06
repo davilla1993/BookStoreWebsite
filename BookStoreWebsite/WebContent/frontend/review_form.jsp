@@ -9,8 +9,7 @@
 <title>Write a Review - Online Book Store</title>
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="../css/jquery.rateyo.min.css" />
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 
 <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
@@ -63,6 +62,7 @@
 </body>
 
 <script type="text/javascript">
+
 	$(document).ready(function() {
 
 		$("#reviewForm").validate({

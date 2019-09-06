@@ -118,7 +118,6 @@
 					min : "Quantity must be greater than 0"
 						},
 			</c:forEach>
-
 			}
 		});
 	});

@@ -83,7 +83,7 @@
 				$("#customerForm").validate({
 					rules: {
 
-						email :{
+						email:{
 							required : true,
 							email : true
 							},

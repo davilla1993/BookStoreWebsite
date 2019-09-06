@@ -1,9 +1,10 @@
 package com.bookstore.controller.frontend;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.ejb.EJB;
-import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +17,8 @@ import com.bookstore.services.ContactServices;
 public class sendEmailServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
+	private String resultat;
+	private Map<String, String> erreurs = new HashMap<String, String>();
      
 	@EJB
 	private ContactServices mail;
@@ -26,22 +29,10 @@ public class sendEmailServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String fromEmail = request.getParameter("from");
-		String subject = request.getParameter("subject");
-		String message = request.getParameter("body");
-		
-		String username = "carlogbossou93@gmail.com";
-		String password = "wxctfiyarfgisarh";
-		String toEmail = "carlogbossou93@gmail.com";
-		
-		try {
-			ContactServices.sendEmail(fromEmail, username, password, toEmail, subject, message);
-		} catch (MessagingException e) {
-			System.out.println("Couldn't send the mail" + e.getMessage());
-			e.printStackTrace();
-		}
-		
+
+		ContactServices contactServices = new ContactServices(request, response);
+		contactServices.readyEmail();
 	}
+	
 }
 
