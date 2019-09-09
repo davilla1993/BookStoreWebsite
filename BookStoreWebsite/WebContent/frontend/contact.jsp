@@ -13,22 +13,22 @@
 
 	<div class="container">
 		<div>
-			<c:if test="{result eq 1}">
+			<c:if test="{messageSuccess != null}">
 				<div class="alert alert-success" role="alert">
-  					The message have been sent successfully. Thank You!
+  				${messageSuccess}
 				</div>
 			</c:if>
 		</div>
 		<div>
-			<c:if test="{result eq -1}">
+			<c:if test="{messageError != null}">
 				<div class="alert alert-danger" role="alert">
-  					Oops!! Something wrong is happened.
+  				${messageError}
 				</div>
 			</c:if>
 		</div>
 		
-		<div class="col-lg-10 col-lg-offset-1">
-			<form id="contact" action="send_email" method="post">
+		<div class="col-lg-10 col-lg-offset-1" style="padding-top:50px">
+			<form action="send_email" method="post" id="contact">
 				<div class="form-row"> 
 					<div class="form-group col-md-6">
 						<label for="firstname">Firstname</label> <input type="text"
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<input type="submit" class="btn btn-success" value="Send" style="height:35px"/>
+					<input type="submit" name="submit" class="btn btn-success" value="Send" style="height:35px"/>
 					<button type="button" class="btn btn-secondary" id="buttonCancel">Cancel</button>
 				</div>
 			</form>
@@ -106,7 +106,6 @@
 					minlength:6
 				},
 	
-				title:"required",
 				message:"required"
 			},
 
@@ -133,8 +132,7 @@
 					number:"Phone number must be numeric",
 					minlength:"Minimum 6 digits are required"
 				},
-
-				title:"Please, enter a title",
+				
 				message:"Message field could not be empty"
 
 			}
