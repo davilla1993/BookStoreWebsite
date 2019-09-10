@@ -117,7 +117,7 @@ public class ContactServices extends HttpServlet {
 			request.setAttribute("messageError", messageError);
 			request.setAttribute("messageSuccess", messageSuccess);
 			
-			String contactPage = "frontend/contact.jsp";
+			String contactPage = "frontend/message.jsp";
 			RequestDispatcher dispatcher = request.getRequestDispatcher(contactPage);
 			dispatcher.forward(request, response);
 		}

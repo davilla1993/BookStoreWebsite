@@ -8,25 +8,10 @@
 			<link rel="stylesheet" href="css/bootstrap.min.css" />
 			<link rel="stylesheet" href="css/style.css" />
 		</head>
-<body>
-	<jsp:directive.include file="header.jsp" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+ <body>
+	<jsp:directive.include file="header.jsp" />
 	<div class="container">
-		<div>
-			<c:if test="{messageSuccess != null}">
-				<div class="alert alert-success" role="alert">
-  				${messageSuccess}
-				</div>
-			</c:if>
-		</div>
-		<div>
-			<c:if test="{messageError != null}">
-				<div class="alert alert-danger" role="alert">
-  				${messageError}
-				</div>
-			</c:if>
-		</div>
-		
+	
 		<div class="col-lg-10 col-lg-offset-1" style="padding-top:50px">
 			<form action="send_email" method="post" id="contact">
 				<div class="form-row"> 
@@ -74,7 +59,7 @@
 	
 	<script type="text/javascript" src="js/jquery-3.4.0.min.js" ></script>
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
-	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 <script type="text/javascript">
 
